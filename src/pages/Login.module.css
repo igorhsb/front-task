@@ -1,0 +1,61 @@
+.main{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "content"
+        "footer";
+    grid-template-rows: 120px auto 100px;
+}
+
+.header{
+    grid-area: "header";
+    display: flex;
+    text-align:center;
+    padding: 15px;
+    align-items: center;
+}
+
+.header h1{
+    font-size: 35px;
+    width: 100%;
+    font-weight: 500;
+}
+
+.container{
+    width: 100%;
+    grid-area: "content";
+    padding: 15px;
+    display: flex;
+    text-align:center;
+    align-items: start;
+    flex-direction: column;
+}
+
+.title{
+    font-size: 25px;
+    width: 100%;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.form{
+    width: 100%;
+}
+
+.footer{
+    grid-area: "footer";
+    border: 1px green solid;
+    padding: 15px;
+    display: flex;
+    text-align:center;
+    align-items: center;
+}
+
+.footer p{
+    font-size: 25px;
+    width: 100%;
+    font-weight: 500;
+}

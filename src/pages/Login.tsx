@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import api from "../api";
 import { AxiosError } from "axios";
+import styles from "./Login.module.css";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -33,32 +34,44 @@ export default function Login() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label>E-mail:</label>
-        <br />
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+    <div className={styles.main}>
+      <div className={styles.header}>
+        <h1> Projeto de gerenciamento de task </h1>
       </div>
+      <div className={styles.container}>
+        <p className={styles.title}>Login</p>
+        <form className={styles.form} onSubmit={handleSubmit}>
+          <div>
+            <label>E-mail:</label>
+            <br />
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
 
-      <div>
-        <label>Senha:</label>
-        <br />
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+          <div>
+            <label>Senha:</label>
+            <br />
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+
+          <button type="submit">Logar</button>
+
+          <p>
+            Não tem uma conta?{" "}
+            <button onClick={goToRegister}>Cadastre-se aqui.</button>
+          </p>
+        </form>
       </div>
-
-      <button type="submit">Logar</button>
-
-      <p>
-        Não tem uma conta? <button onClick={goToRegister}>Cadastre-se aqui.</button>
-      </p>
-    </form>
+      <div className={styles.footer}>
+        <p> Desenvolvido por: Lucy a rainha da sonequinha</p>
+      </div>
+    </div>
   );
 }
