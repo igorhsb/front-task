@@ -108,11 +108,24 @@
     color: blue;
 }
 
-.updateTaskBtn{
+.updateTaskListBtn{
     border-color: white;
     background-color: green;
     margin-left: 5px;
     font-size: 13px;
+}
+
+.updateTaskListBtn:hover{
+    border-color: green;
+    background-color: white;
+    color: green;
+}
+
+.updateTaskBtn{
+    border-color: white;
+    background-color: green;
+    margin-right: 5px;
+    font-size: 11px;
 }
 
 .updateTaskBtn:hover{
@@ -131,4 +144,34 @@
     border-color: red;
     background-color: white;
     color: red;
+}
+
+.modalContent {
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+}
+
+.createTaskBtnModal{
+    margin-top: 5px;
+    border-color: white;
+    background-color: blue;
+    color: white;
+    font-size: 13px;
+}
+
+.createTaskBtnModal:hover{
+    border-color: blue;
+    background-color: white;
+    color: blue;
+}
+
+.inputModal{
+    color: white;
+    font-size: 15px;
+}
+
+.titleModal{
+    color: white;
+    font-size: 20px;
 }
