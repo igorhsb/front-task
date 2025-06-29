@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import  { AxiosError } from 'axios';
 import api from "../api";
+import styles from "./Register.module.css";
 
 export default function Register() {
   const [email, setEmail] = useState("");
@@ -33,29 +34,46 @@ export default function Register() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label>E-mail:</label>
-        <br />
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+    <div className={styles.main}>
+      <div className={styles.header}>
+        <h1> Projeto de gerenciamento de task </h1>
       </div>
+      <div className={styles.content}>
+        <div className={styles.container}>
+          <p className={styles.title}>Login</p>
+          <form className={styles.form} onSubmit={handleSubmit}>
+            <div>
+              <label>E-mail:</label>
+              <br />
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
 
-      <div>
-        <label>Senha:</label>
-        <br />
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+            <div>
+              <label>Senha:</label>
+              <br />
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
+
+            <button type="submit">Cadastrar</button>
+
+            <p>
+              Já possui uma conta?{" "}
+              <button onClick={goToLogin}>Faça login por aqui</button>
+            </p>
+          </form>
+        </div>
       </div>
-
-      <button type="submit">Cadastrar</button>
-      <p>Já tem conta? <button onClick={goToLogin}>Faça login.</button></p>
-    </form>
+      <div className={styles.footer}>
+        <p> Desenvolvido por: Lucy a rainha da sonequinha</p>
+      </div>
+    </div>
   );
 }

@@ -1,0 +1,134 @@
+.main{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "content"
+        "footer";
+    grid-template-rows: 120px auto 100px;
+}
+
+.header{
+    width: 100%;
+    grid-area: "header";
+    display: flex;
+    text-align:center;
+    padding: 15px;
+    align-items: center;
+    background-color: green;
+    box-shadow: 0px 5px 50px black;
+}
+
+.header h1{
+    font-size: 35px;
+    width: 100%;
+    font-weight: 500;
+}
+
+.content{
+    width: 100%;
+    grid-area: "content";
+    padding: 15px;
+    display: flex;
+    text-align:center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container{
+    margin-top: 50px;
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+    border: 3px solid green;
+    border-radius: 40px;
+    width: 800px;
+    box-shadow: 0px 0px 50px green;
+}
+
+.title{
+    font-size: 35px;
+    width: 100%;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.form{
+    width: 100%;
+}
+
+.footer{
+    width: 100%;
+    grid-area: "footer";
+    padding: 15px;
+    display: flex;
+    text-align:center;
+    align-items: center;
+    background-color: green;
+    box-shadow: 0px 5px 50px black;
+}
+
+.footer p{
+    font-size: 25px;
+    width: 100%;
+    font-weight: 500;
+}
+
+.tg {border-collapse:collapse;border-spacing:0; width: 100%;}
+
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+
+.tg .tgBaqh{text-align:center;vertical-align:top}
+
+.buttonsDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.createTaskBtn{
+    border-color: white;
+    background-color: blue;
+    color: white;
+    font-size: 13px;
+}
+
+.createTaskBtn:hover{
+    border-color: blue;
+    background-color: white;
+    color: blue;
+}
+
+.updateTaskBtn{
+    border-color: white;
+    background-color: green;
+    margin-left: 5px;
+    font-size: 13px;
+}
+
+.updateTaskBtn:hover{
+    border-color: green;
+    background-color: white;
+    color: green;
+}
+
+.deleteTaskBtn{
+    border-color: white;
+    background-color: red;
+    font-size: 11px;
+}
+
+.deleteTaskBtn:hover{
+    border-color: red;
+    background-color: white;
+    color: red;
+}

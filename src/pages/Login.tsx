@@ -38,36 +38,38 @@ export default function Login() {
       <div className={styles.header}>
         <h1> Projeto de gerenciamento de task </h1>
       </div>
-      <div className={styles.container}>
-        <p className={styles.title}>Login</p>
-        <form className={styles.form} onSubmit={handleSubmit}>
-          <div>
-            <label>E-mail:</label>
-            <br />
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
+      <div className={styles.content}>
+        <div className={styles.container}>
+          <p className={styles.title}>Login</p>
+          <form className={styles.form} onSubmit={handleSubmit}>
+            <div>
+              <label>E-mail:</label>
+              <br />
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
 
-          <div>
-            <label>Senha:</label>
-            <br />
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
+            <div>
+              <label>Senha:</label>
+              <br />
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
 
-          <button type="submit">Logar</button>
+            <button type="submit">Logar</button>
 
-          <p>
-            Não tem uma conta?{" "}
-            <button onClick={goToRegister}>Cadastre-se aqui.</button>
-          </p>
-        </form>
+            <p>
+              Não tem uma conta?{" "}
+              <button onClick={goToRegister}>Cadastre-se aqui.</button>
+            </p>
+          </form>
+        </div>
       </div>
       <div className={styles.footer}>
         <p> Desenvolvido por: Lucy a rainha da sonequinha</p>
